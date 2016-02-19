@@ -87,7 +87,7 @@ class ShowAllCoordinates ( NSObject, GlyphsReporterProtocol ):
 						#	# top left: 6, top center: 7, top right: 8, center left: 3, center center: 4, center right: 5, bottom left: 0, bottom center: 1, bottom right: 2
 						#else:
 						#	textAlignment = 3
-						self.drawTextAtPoint( " %s, %s" % (pt.x, pt.y), (pt.x, pt.y), 6 )
+						self.drawTextAtPoint( " %g, %g" % (pt.x, pt.y), (pt.x, pt.y), 6 )
 						#prev_pt = pt
 			for anchor in Layer.anchors:
 				self.drawTextAtPoint(" %s, %s" % (anchor.position.x, anchor.position.y), (anchor.position.x, anchor.position.y), 6 )
