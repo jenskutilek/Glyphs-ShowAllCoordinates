@@ -2,8 +2,7 @@
 # encoding: utf-8
 
 import objc
-from Foundation import *
-from AppKit import *
+from AppKit import NSAttributedString, NSBundle, NSColor, NSFont, NSFontAttributeName, NSForegroundColorAttributeName, NSObject, NSUserDefaults
 import sys
 
 # from math import atan2, degrees
