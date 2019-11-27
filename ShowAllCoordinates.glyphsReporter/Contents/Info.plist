@@ -17,17 +17,17 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.1.0</string>
+	<string>0.2.0</string>
 	<key>UpdateFeedURL</key>
 	<string>https://raw.githubusercontent.com/jenskutilek/Glyphs-ShowAllCoordinates/master/ShowAllCoordinates.glyphsReporter/Contents/Info.plist</string>
 	<key>productPageURL</key>
 	<string>https://github.com/jenskutilek/Glyphs-ShowAllCoordinates</string>
 	<key>productReleaseNotes</key>
-	<string>____LatestReleaseNotes____</string>
+	<string>Update code, startup performance improvements</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright by Jens Kutilek, 2015</string>
+	<string>Copyright by Jens Kutilek, 2015-2019</string>
 	<key>NSPrincipalClass</key>
 	<string>ShowAllCoordinates</string>
 	<key>PyMainFileNames</key>

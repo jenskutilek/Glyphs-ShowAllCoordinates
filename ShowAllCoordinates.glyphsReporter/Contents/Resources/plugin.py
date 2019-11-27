@@ -1,8 +1,8 @@
 # encoding: utf-8
 
 import objc
-from GlyphsApp import *
-from GlyphsApp.plugins import *
+from GlyphsApp import Glyphs
+from GlyphsApp.plugins import ReporterPlugin
 from AppKit import NSAttributedString, NSBundle, NSColor, NSFont, \
     NSFontAttributeName, NSForegroundColorAttributeName, NSObject, \
     NSUserDefaults
