@@ -4,14 +4,14 @@
 import objc
 from Foundation import *
 from AppKit import *
-import sys, os, re
+import sys
 
 # from math import atan2, degrees
 
 MainBundle = NSBundle.mainBundle()
 path = MainBundle.bundlePath() + "/Contents/Scripts"
-if not path in sys.path:
-    sys.path.append( path )
+if path not in sys.path:
+    sys.path.append(path)
 
 import GlyphsApp
 
