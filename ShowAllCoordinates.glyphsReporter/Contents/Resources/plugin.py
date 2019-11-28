@@ -3,8 +3,8 @@
 import objc
 from GlyphsApp import Glyphs
 from GlyphsApp.plugins import ReporterPlugin
-from AppKit import NSAttributedString, NSBundle, NSColor, NSFont, \
-    NSFontAttributeName, NSForegroundColorAttributeName, NSObject, \
+from AppKit import NSAttributedString, NSClassFromString, NSColor, NSFont, \
+    NSFontAttributeName, NSForegroundColorAttributeName, \
     NSUserDefaults
 
 # def angle(p1, p2):
@@ -20,6 +20,19 @@ class ShowAllCoordinates(ReporterPlugin):
         })
 
     def foreground(self, layer):
+        currentController = self.controller.view().window().windowController()
+        if currentController:
+            tool = currentController.toolDrawDelegate()
+            if (
+                tool.isKindOfClass_(NSClassFromString("GlyphsToolText"))
+                or tool.isKindOfClass_(NSClassFromString("GlyphsToolHand"))
+                or tool.isKindOfClass_(NSClassFromString("GlyphsToolTrueTypeInstructor"))
+            ):
+                return
+        self.current_zoom = self.getScale()
+        if self.current_zoom < 0.5:
+            return
+
         for path in layer.paths:
             for segment in path.segments:
                 for pt in segment:
@@ -58,9 +71,8 @@ class ShowAllCoordinates(ReporterPlugin):
         """
         try:
             glyphEditView = self.controller.graphicView()
-            currentZoom = self.getScale()
             fontAttributes = {
-                NSFontAttributeName: NSFont.labelFontOfSize_(fontSize / currentZoom),
+                NSFontAttributeName: NSFont.labelFontOfSize_(fontSize / self.current_zoom),
                 NSForegroundColorAttributeName: fontColor
             }
             displayText = NSAttributedString.alloc().initWithString_attributes_(text, fontAttributes)
