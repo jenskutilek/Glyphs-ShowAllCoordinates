@@ -13,9 +13,9 @@
 	<key>CFBundleName</key>
 	<string>ShowAllCoordinates</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>5</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.2.2</string>
+	<string>0.2.3</string>
 	<key>UpdateFeedURL</key>
 	<string>https://raw.githubusercontent.com/jenskutilek/Glyphs-ShowAllCoordinates/master/ShowAllCoordinates.glyphsReporter/Contents/Info.plist</string>
 	<key>productPageURL</key>
